@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_Checkbox
+  File name(文件名): test4
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/27
+  Time(创建时间)： 21:00
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <el-checkbox-group v-model="checkList" @change="change">
+        <el-checkbox label="复选框 A"></el-checkbox>
+        <el-checkbox label="复选框 B"></el-checkbox>
+        <el-checkbox label="复选框 C"></el-checkbox>
+        <el-checkbox label="禁用" disabled></el-checkbox>
+        <el-checkbox label="选中且禁用" disabled></el-checkbox>
+    </el-checkbox-group>
+
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            checkList: ['选中且禁用', '复选框 A']
+        },
+        methods: {
+            change: function ()
+            {
+                console.log(this.checkList)
+            }
+        },
+    })
+</script>
+</body>
+</html>
