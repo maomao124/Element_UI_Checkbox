@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_Checkbox
+  File name(文件名): test7
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/27
+  Time(创建时间)： 21:15
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <el-checkbox-group v-model="list" @change="change">
+        <el-checkbox-button v-for="item in listAll" :label="item" :key="item">{{item}}</el-checkbox-button>
+    </el-checkbox-group>
+
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            list: ["选项1"],
+            listAll: ["选项1", "选项2", "选项3", "选项4", "选项5", "选项6", "选项7"]
+        },
+        methods: {
+            change: function ()
+            {
+                console.log(this.list)
+            }
+        },
+    })
+</script>
+</body>
+</html>

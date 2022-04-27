@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_Checkbox
+  File name(文件名): test6
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/27
+  Time(创建时间)： 21:12
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <el-checkbox-group
+            v-model="checkedCities"
+            :min="1"
+            :max="2">
+        <el-checkbox v-for="city in cities" :label="city" :key="city">{{city}}</el-checkbox>
+    </el-checkbox-group>
+</div>
+
+<script>
+    const cityOptions = ['上海', '北京', '广州', '深圳'];
+    var app = new Vue({
+        el: "#app",
+        data: {
+            checkedCities: ['上海', '北京'],
+            cities: cityOptions
+        },
+        methods: {
+        },
+    })
+</script>
+</body>
+</html>
